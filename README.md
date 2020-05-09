@@ -1,15 +1,16 @@
-# Carat
-> Application for the jeweller's shop.
+
+# Carat  <img src="Screenshots/appIcon.png" width="40px" />
+> Application for a jeweller's shop.
 >
 > Written in SwiftUI.
 
 <br/>
 
-### Fuctionality of the App
-1. Demonstrates jewelleries made by company's team.
-2. Provides additional information about items.
-3. Allows to user to require an appointment.
-4. Sends and gets data from the API.
+### Fuctionality of the App 
+1. Demonstrate jewelleries made by company's team.
+2. Provide additional information about items.
+3. Allow user to require an appointment.
+4. Send and get data from the API.
 
 <br/>
 
@@ -17,17 +18,14 @@
 
 *Main View with Scroll Views: horizontal - for jewelleries, vartical - for description*
 
-![Main View](Screenshots/mainView.png)
+![Main View](Screenshots/catalogueView.gif)
+
 <br/>
 
 *Form for requesting an appointment by user*
 
-![Form View](Screenshots/formView.png)
-<br/>
+![Form View](Screenshots/orderView.gif)
 
-*Custom Alert*
-
-![Alert View](Screenshots/customAlert.png)
 <br/>
 
 ### Features 

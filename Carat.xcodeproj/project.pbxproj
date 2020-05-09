@@ -89,7 +89,6 @@
 				AF4E03BC2452F98B0039A7DF /* Extensions */,
 				AF4E03CC245339CE0039A7DF /* Model */,
 				AF4E03B72452F4EF0039A7DF /* Views */,
-				AF4E03A72452F3AE0039A7DF /* ContentView.swift */,
 				AF4E03BF24530BA00039A7DF /* Fonts */,
 				AF4E03A92452F3B50039A7DF /* Assets.xcassets */,
 				AF4E03AE2452F3B50039A7DF /* LaunchScreen.storyboard */,
@@ -115,6 +114,7 @@
 				AF4E03CA245324670039A7DF /* DeliveryDetailsView.swift */,
 				AF7E8CAC24575D8A00C41489 /* TextFieldCustomStyle.swift */,
 				AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */,
+				AF4E03A72452F3AE0039A7DF /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
