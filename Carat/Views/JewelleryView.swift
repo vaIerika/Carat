@@ -31,8 +31,9 @@ struct JewelleryView: View {
                                     .foregroundColor(.darkGold)
                                 Text(self.jewellery.price)
                             }
-                            .font(.custom("OldStandardTT-Regular", size: 15))
-                            .foregroundColor(.platinum)
+                            .fontOldStandard(color: .platinum)
+                            //.font(.custom("OldStandardTT-Regular", size: 15))
+                           // .foregroundColor(.platinum)
                             .padding(.leading, 20)
                             .padding(.bottom, 20)
                             Spacer()
@@ -42,8 +43,9 @@ struct JewelleryView: View {
                     
                     VStack {
                         Text(self.jewellery.title)
-                            .font(.custom("Bodoni-16-Bold", size: 32))
-                            .foregroundColor(.platinum)
+                            .fontBodoni(style: .largeTitle, color: .platinum)
+                         //   .font(.custom("Bodoni-16-Bold", size: 32))
+                           // .foregroundColor(.platinum)
                             .padding(.top, 17)
                             .padding(.bottom, 10)
                         Text(self.jewellery.subtitle.uppercased())
@@ -53,9 +55,10 @@ struct JewelleryView: View {
                             .padding(.bottom, 35)
                        
                         Text(self.jewellery.description)
+                            .fontOldStandard(style: .footnote, color: .platinum)
                             .fixedSize(horizontal: false, vertical: true)
-                            .font(.custom("OldStandardTT-Regular", size: 15))
-                            .foregroundColor(.platinum)
+                            //.font(.custom("OldStandardTT-Regular", size: 15))
+                            //.foregroundColor(.platinum)
                             .multilineTextAlignment(.center)
                             .lineSpacing(5)
                             .layoutPriority(2)

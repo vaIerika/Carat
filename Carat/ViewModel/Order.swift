@@ -5,7 +5,6 @@
 //  Created by Valerie 👩🏼‍💻 on 24/04/2020.
 //
 
-import Foundation
 import SwiftUI
 
 class Order: ObservableObject, Codable {
@@ -18,7 +17,7 @@ class Order: ObservableObject, Codable {
     @Published var emailAddress = "example@gmail.com"
     @Published var phoneNumber = "+321 910 372 28 83"
     
-    var invalidInformation: Bool {
+    var isValidInfo: Bool {
         let validName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let validEmailAddress = emailAddress.trimmingCharacters(in: .whitespacesAndNewlines)
         let validPhoneNumber = phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -30,9 +29,10 @@ class Order: ObservableObject, Codable {
     }
     
     init() {}
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         jewellery = try container.decode(Jewellery.self, forKey: .jewellery)
         name = try container.decode(String.self, forKey: .name)
         emailAddress = try container.decode(String.self, forKey: .emailAddress)

@@ -35,18 +35,20 @@ struct DeliveryDetailsView: View {
                         Spacer()
                         HStack {
                             Text(self.order.jewellery.title)
-                                .font(.custom("Bodoni-16-Bold", size: 22))
+                               // .font(.custom("Bodoni-16-Bold", size: 22))
+                                .fontBodoni(color: .platinum)
                             
                             Spacer()
                             
                             VStack(alignment: .trailing, spacing: 10) {
                                 Text("Price")
                                     .foregroundColor(.darkGold)
-                                Text(self.order.jewellery.price)
+                                Text(order.jewellery.price)
                             }
-                            .font(.custom("OldStandardTT-Regular", size: 15))
+                            .fontOldStandard(color: .platinum)
+                           // .font(.custom("OldStandardTT-Regular", size: 15))
                         }
-                        .foregroundColor(.platinum)
+                       // .foregroundColor(.platinum)
                         .padding(.horizontal, 25)
                         .padding(.bottom, 15)
                     }
@@ -56,28 +58,30 @@ struct DeliveryDetailsView: View {
 
                 VStack {
                     Text("Require an appointment")
-                        .font(.custom("OldStandardTT-Regular", size: 22))
+                        .fontOldStandard(style: .title1, color: .paleGold)
                         .padding(.bottom, 20)
                     
                     Text("We are honoured by your interest and delighted you could enjoy jewellery made by our team.")
-                        .font(.custom("OldStandardTT-Regular", size: 15))
+                        .fontOldStandard(color: .paleGold)
+                       // .font(.custom("OldStandardTT-Regular", size: 15))
                         .multilineTextAlignment(.center)
                         .opacity(0.5)
                 }
-                .foregroundColor(.paleGold)
+               // .foregroundColor(.paleGold)
                 .padding(.horizontal, 20)
                 .padding(.top, 25)
                 
                 VStack {
                     TextField("Name", text: self.$order.name)
                         .textContentType(.name)
-                        .modifier(TextFieldCustomStyle(showPlaceHolder: self.order.name.isEmpty, placeholder: "Name", image: "person"))
+                        .modifier(TextFieldCustomStyle(isPresented: self.order.name.isEmpty, placeholder: "Name", image: "person"))
                     TextField("Phone", text: self.$order.phoneNumber)
                         .textContentType(.telephoneNumber)
-                        .modifier(TextFieldCustomStyle(showPlaceHolder: self.order.phoneNumber.isEmpty, placeholder: "Phone number", image: "phone"))
+                        .modifier(TextFieldCustomStyle(isPresented: self.order.phoneNumber.isEmpty, placeholder: "Phone number", image: "phone"))
                     TextField("Email", text: self.$order.emailAddress)
                         .textContentType(.emailAddress)
-                        .modifier(TextFieldCustomStyle(showPlaceHolder: self.order.emailAddress.isEmpty, placeholder: "Email address", image: "paperplane"))
+                        .darkTextField(isPresented: order.emailAddress.isEmpty, placeholder: "Email address", image: "paperplane")
+                       // .modifier(TextFieldCustomStyle(isPresented: self.order.emailAddress.isEmpty, placeholder: "Email address", image: "paperplane"))
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -93,15 +97,16 @@ struct DeliveryDetailsView: View {
                             .stroke()
                             .frame(height: 55)
                         Text("Send")
-                            .font(.custom("OldStandardTT-Regular", size: 22))
+                           // .font(.custom("OldStandardTT-Regular", size: 22))
+                            .fontOldStandard(style: .title2, color: .darkGold)
                     }
                     
                 }
                 .frame(height: 55)
-                .disabled(self.order.invalidInformation)
-                .opacity(self.order.invalidInformation ? 0.4 : 1)
+                .disabled(order.isValidInfo)
+                .opacity(order.isValidInfo ? 0.4 : 1)
                 .padding(.horizontal, 20)
-                .foregroundColor(.darkGold)
+               // .foregroundColor(.darkGold)
                 
                 Spacer()
             }

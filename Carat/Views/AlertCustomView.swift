@@ -17,11 +17,12 @@ struct AlertCustomView: View {
         ZStack {
             VStack {
                 Text(title)
-                    .font(.custom("Bodoni-16-Bold", size: 22))
+                    .fontBodoni()
                     .padding(.top, 55)
                     .padding(.bottom, 30)
                 VStack {
                     Text(subtitle)
+                    
                     if !message.isEmpty {
                         Text(message)
                             .opacity(0.6)
@@ -29,23 +30,22 @@ struct AlertCustomView: View {
 
                     }
                 }
+                .fontOldStandard()
                 .padding(.horizontal, 45)
                 
                 Button(action: {
                     self.shown = false
                 }) {
                     Text("Close")
+                        .fontOldStandard()
                         .foregroundColor(.darkGold)
                 }
                 .padding(.top, 30)
                 .padding(.bottom, 50)
-                
             }
-            .font(.custom("OldStandardTT-Regular", size: 15))
-            .foregroundColor(.onyx)
         }
-            .background(Color.paleGold)
-            .padding(.horizontal, 35)
+        .background(Color.paleGold)
+        .padding(.horizontal, 35)
     }
 }
 
