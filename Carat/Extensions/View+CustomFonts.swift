@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-
-//.font(.custom("Bodoni-16-Bold", size: 22))
-//
-//    .font(.custom("OldStandardTT-Regular", size: 15))
-//    .font(.custom("OldStandardTT-Regular", size: 15))
-
-
 struct BodoniFontModifier: ViewModifier {
     var style: UIFont.TextStyle
     var color: Color
@@ -24,7 +17,7 @@ struct BodoniFontModifier: ViewModifier {
         content
             .font(.custom(fontName, size: UIFont.preferredFont(forTextStyle: style).pointSize))
             .foregroundColor(color)
-        }
+    }
 }
 
 struct OldStandardModifier: ViewModifier {

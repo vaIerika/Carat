@@ -8,72 +8,54 @@
 import SwiftUI
 
 struct JewelleryView: View {
-     let uuid = UUID()
     let jewellery: Jewellery
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            ZStack {
-                Color.onyx
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    ZStack {
-                        Image("\(self.jewellery.title)")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .edgesIgnoringSafeArea(.all)
-                            .frame(width: 380, height: 680)
-                            .clipShape(Rectangle())
-                        HStack {
-                            VStack(alignment: .leading, spacing: 10) {
-                                Spacer()
-                                Text("Price")
-                                    .foregroundColor(.darkGold)
-                                Text(self.jewellery.price)
-                            }
-                            .fontOldStandard(color: .platinum)
-                            //.font(.custom("OldStandardTT-Regular", size: 15))
-                           // .foregroundColor(.platinum)
-                            .padding(.leading, 20)
-                            .padding(.bottom, 20)
-                            Spacer()
-                        }
-                    }
-                    .frame(width: 380, height: 680)
+        ZStack {
+            Color.onyx
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                ZStack(alignment: .bottomLeading) {
+                    Image("\(jewellery.title)")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+                        .clipped()
                     
-                    VStack {
-                        Text(self.jewellery.title)
-                            .fontBodoni(style: .largeTitle, color: .platinum)
-                         //   .font(.custom("Bodoni-16-Bold", size: 32))
-                           // .foregroundColor(.platinum)
-                            .padding(.top, 17)
-                            .padding(.bottom, 10)
-                        Text(self.jewellery.subtitle.uppercased())
-                            .font(.custom("OldStandardTT-Regular", size: 11))
-                            .foregroundColor(.paleGold)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 35)
-                       
-                        Text(self.jewellery.description)
-                            .fontOldStandard(style: .footnote, color: .platinum)
-                            .fixedSize(horizontal: false, vertical: true)
-                            //.font(.custom("OldStandardTT-Regular", size: 15))
-                            //.foregroundColor(.platinum)
-                            .multilineTextAlignment(.center)
-                            .lineSpacing(5)
-                            .layoutPriority(2)
-                            .lineLimit(20)
-                            .padding(.horizontal, 15)
-                            .padding(.bottom, 30)
-
-                         Image("textDivider")
-                            .padding(.bottom, 60)
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Price")
+                            .foregroundColor(.darkGold)
+                        Text(jewellery.price)
                     }
-                    .frame(width: 370)
+                    .fontOldStandard(color: .platinum)
+                    .padding()
                 }
+                VStack {
+                    Text(jewellery.title)
+                        .fontBodoni(style: .largeTitle, color: .platinum)
+                        .padding(.top, 17)
+                        .padding(.bottom, 10)
+                    
+                    Text(jewellery.subtitle.uppercased())
+                        .fontOldStandard(style: .footnote, color: .paleGold)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 35)
+                    
+                    Text(jewellery.description)
+                        .fontOldStandard(style: .footnote, color: .platinum)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(5)
+                        .lineLimit(30)
+                        .padding(.horizontal, 15)
+                        .padding(.bottom, 30)
+                    
+                    Image("textDivider")
+                        .padding(.bottom, 100)
+                }
+                .padding(.horizontal, 8)
             }
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

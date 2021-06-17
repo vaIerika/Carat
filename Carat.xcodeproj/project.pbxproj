@@ -13,7 +13,6 @@
 		AF4E03AA2452F3B50039A7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4E03A92452F3B50039A7DF /* Assets.xcassets */; };
 		AF4E03AD2452F3B50039A7DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4E03AC2452F3B50039A7DF /* Preview Assets.xcassets */; };
 		AF4E03B02452F3B50039A7DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4E03AE2452F3B50039A7DF /* LaunchScreen.storyboard */; };
-		AF4E03B92452F5490039A7DF /* JewelleryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E03B82452F5490039A7DF /* JewelleryRowView.swift */; };
 		AF4E03BB2452F6320039A7DF /* JewelleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E03BA2452F6320039A7DF /* JewelleryView.swift */; };
 		AF4E03BE2452F9B40039A7DF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E03BD2452F9B40039A7DF /* ColorExtension.swift */; };
 		AF4E03C4245315500039A7DF /* OldStandardTTLicense.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF4E03C3245315500039A7DF /* OldStandardTTLicense.txt */; };
@@ -39,7 +38,6 @@
 		AF4E03AC2452F3B50039A7DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF4E03AF2452F3B50039A7DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4E03B12452F3B50039A7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF4E03B82452F5490039A7DF /* JewelleryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewelleryRowView.swift; sourceTree = "<group>"; };
 		AF4E03BA2452F6320039A7DF /* JewelleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewelleryView.swift; sourceTree = "<group>"; };
 		AF4E03BD2452F9B40039A7DF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AF4E03C024530BB90039A7DF /* OldStandardTT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OldStandardTT-Regular.ttf"; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				AF4E03A72452F3AE0039A7DF /* ContentView.swift */,
-				AF4E03B82452F5490039A7DF /* JewelleryRowView.swift */,
 				AF4E03BA2452F6320039A7DF /* JewelleryView.swift */,
 				AF4E03CA245324670039A7DF /* DeliveryDetailsView.swift */,
 				AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */,
@@ -247,7 +244,6 @@
 				AF4E03CE245339EE0039A7DF /* Jewellery.swift in Sources */,
 				AF4E03A82452F3AE0039A7DF /* ContentView.swift in Sources */,
 				AF7E8CAD24575D8A00C41489 /* View+darkTextField.swift in Sources */,
-				AF4E03B92452F5490039A7DF /* JewelleryRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +384,7 @@
 				DEVELOPMENT_TEAM = YA4J44RAZS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Carat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +405,7 @@
 				DEVELOPMENT_TEAM = YA4J44RAZS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Carat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

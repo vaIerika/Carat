@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DeliveryDetailsView: View {
+    @Environment (\.presentationMode) var presentationMode
     @ObservedObject private var keyboard = KeyboardResponder()
 
     @ObservedObject var order: Order
@@ -32,7 +33,11 @@ struct DeliveryDetailsView: View {
                         .clipped()
                     
                     VStack {
+     
                         Spacer()
+                        Button("back") { presentationMode.wrappedValue.dismiss() }
+                            .foregroundColor(.white)
+                            
                         HStack {
                             Text(self.order.jewellery.title)
                                // .font(.custom("Bodoni-16-Bold", size: 22))
@@ -113,14 +118,16 @@ struct DeliveryDetailsView: View {
             .edgesIgnoringSafeArea(.all)
             .opacity(self.showingAlert ? 0.2 : 1)
             
-            if self.showingAlert {
-                AlertCustomView(title: self.alertTitle, subtitle: self.alertSubTitle, message: self.alertMessage, shown: self.$showingAlert)
+            if showingAlert {
+                AlertCustomView(isPresented: $showingAlert, title: alertTitle, subtitle: alertSubTitle, message: alertMessage)
             }
         }
         .onAppear(perform: self.createOrder)
         .padding(.bottom, keyboard.currentHeight)
         .edgesIgnoringSafeArea(.bottom)
         .animation(.easeOut(duration: 0.16))
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     func createOrder() {

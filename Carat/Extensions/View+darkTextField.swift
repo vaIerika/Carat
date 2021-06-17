@@ -18,7 +18,6 @@ struct TextFieldCustomStyle: ViewModifier {
                 .frame(height: 55)
                 .foregroundColor(.midnight)
             
-            
             Image(systemName: image)
                 .font(.callout)
                 .padding(.horizontal, 30)
@@ -28,7 +27,6 @@ struct TextFieldCustomStyle: ViewModifier {
                 Text(placeholder)
                     .fontOldStandard(color: .platinum)
                     .padding(.horizontal, 60)
-                
             }
             content
                 .fontOldStandard(color: .darkGold)

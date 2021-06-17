@@ -22,10 +22,7 @@ class Order: ObservableObject, Codable {
         let validEmailAddress = emailAddress.trimmingCharacters(in: .whitespacesAndNewlines)
         let validPhoneNumber = phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        if validName.count < 3 || validEmailAddress.count < 6 || validPhoneNumber.count < 7 {
-            return true
-        }
-        return false 
+        return (validName.count < 3) && (validEmailAddress.count < 6) && (validPhoneNumber.count < 7)
     }
     
     init() {}
