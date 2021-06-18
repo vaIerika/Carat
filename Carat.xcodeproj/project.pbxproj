@@ -26,6 +26,7 @@
 		AF7E8CAB24575C9100C41489 /* AlertCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */; };
 		AF7E8CAD24575D8A00C41489 /* View+darkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E8CAC24575D8A00C41489 /* View+darkTextField.swift */; };
 		AF7E8CAF2457614A00C41489 /* KeyboardResponser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E8CAE2457614A00C41489 /* KeyboardResponser.swift */; };
+		B84DC418267CBE5A00A62218 /* OrderFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DC417267CBE5A00A62218 /* OrderFormView.swift */; };
 		B8858C63267A3F8B007D18C9 /* View+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8858C62267A3F8B007D18C9 /* View+CustomFonts.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomView.swift; sourceTree = "<group>"; };
 		AF7E8CAC24575D8A00C41489 /* View+darkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+darkTextField.swift"; sourceTree = "<group>"; };
 		AF7E8CAE2457614A00C41489 /* KeyboardResponser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponser.swift; sourceTree = "<group>"; };
+		B84DC417267CBE5A00A62218 /* OrderFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormView.swift; sourceTree = "<group>"; };
 		B8858C62267A3F8B007D18C9 /* View+CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomFonts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				AF4E03A72452F3AE0039A7DF /* ContentView.swift */,
-				AF4E03BA2452F6320039A7DF /* JewelleryView.swift */,
 				AF4E03CA245324670039A7DF /* DeliveryDetailsView.swift */,
-				AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */,
+				B84DC417267CBE5A00A62218 /* OrderFormView.swift */,
+				B84DC419267CDC5900A62218 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,8 +123,8 @@
 		AF4E03BC2452F98B0039A7DF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B8858C62267A3F8B007D18C9 /* View+CustomFonts.swift */,
 				AF7E8CAC24575D8A00C41489 /* View+darkTextField.swift */,
+				B8858C62267A3F8B007D18C9 /* View+CustomFonts.swift */,
 				AF4E03BD2452F9B40039A7DF /* ColorExtension.swift */,
 				AF7E8CAE2457614A00C41489 /* KeyboardResponser.swift */,
 			);
@@ -147,6 +149,15 @@
 				AF4E03CD245339EE0039A7DF /* Jewellery.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B84DC419267CDC5900A62218 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AF4E03BA2452F6320039A7DF /* JewelleryView.swift */,
+				AF7E8CAA24575C9000C41489 /* AlertCustomView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B8858C61267A3AB4007D18C9 /* ViewModel */ = {
@@ -184,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					AF4E039F2452F3AE0039A7DF = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -244,6 +255,7 @@
 				AF4E03CE245339EE0039A7DF /* Jewellery.swift in Sources */,
 				AF4E03A82452F3AE0039A7DF /* ContentView.swift in Sources */,
 				AF7E8CAD24575D8A00C41489 /* View+darkTextField.swift in Sources */,
+				B84DC418267CBE5A00A62218 /* OrderFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +299,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -347,6 +360,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

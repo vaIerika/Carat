@@ -17,12 +17,12 @@ class Order: ObservableObject, Codable {
     @Published var emailAddress = "example@gmail.com"
     @Published var phoneNumber = "+321 910 372 28 83"
     
-    var isValidInfo: Bool {
+    var isInvalid: Bool {
         let validName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let validEmailAddress = emailAddress.trimmingCharacters(in: .whitespacesAndNewlines)
         let validPhoneNumber = phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        return (validName.count < 3) && (validEmailAddress.count < 6) && (validPhoneNumber.count < 7)
+        return (validName.count < 3) || (validEmailAddress.count < 6) || (validPhoneNumber.count < 7)
     }
     
     init() {}

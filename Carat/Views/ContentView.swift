@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var order = Order()
     let items = Catalogue().jewelleries
     
-    @ObservedObject var order = Order()
     @State private var showDetails = false
-    @State private var chosenItem: Jewellery? = nil
     
     var body: some View {
         NavigationView {
@@ -23,10 +22,10 @@ struct ContentView: View {
                             JewelleryView(jewellery: item)
                                 .buttonStyle(PlainButtonStyle())
                                 .onTapGesture {
-                                    chosenItem = item
+                                    order.jewellery = item
                                     showDetails = true
                                 }
-                            NavigationLink("", destination: DeliveryDetailsView(order: order, chosenJewellery: item), isActive: $showDetails)
+                            NavigationLink("", destination: DeliveryDetailsView(order: order), isActive: $showDetails)
                         }
                     }.padding(.horizontal, 15)
                 }
