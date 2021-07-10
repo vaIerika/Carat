@@ -16,13 +16,13 @@
 
 *Main View*
 
-![Main View](Screenshots/Catalogue.mp4)
+![Main View](Screenshots/Catalogue.gif)
 
 <br/>
 
 *Form for requesting an appointment*
 
-![Form View](Screenshots/Appointment.mp4)
+![Form View](Screenshots/Appointment.gif)
 
 <br/>
 
