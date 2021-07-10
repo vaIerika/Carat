@@ -6,42 +6,36 @@
 
 <br/>
 
-### Fuctionality of the App 
+### Functionality of the App
 1. Demonstrate jewelleries made by company's team.
-2. Provide additional information about items.
-3. Allow user to require an appointment.
-4. Send and get data from the API.
+2. Require an appointment by sending API request with order details.
 
 <br/>
 
 ### Screenshots
 
-*Main View with Scroll Views: horizontal - for jewelleries, vartical - for description*
+*Main View*
 
-![Main View](Screenshots/catalogueView.gif)
-
-<br/>
-
-*Form for requesting an appointment by user*
-
-![Form View](Screenshots/orderView.gif)
+![Main View](Screenshots/Catalogue.mp4)
 
 <br/>
 
-### Features 
-- Codable conformance for @Published properties (CodingKeys, Decoder and Encoder instances)
-- Custom views of Text Field and Alert 
-- Keyboard responder to lift up the text fields and button if user is typing
+*Form for requesting an appointment*
+
+![Form View](Screenshots/Appointment.mp4)
+
 <br/>
 
-### Communication
-If you found a bug or want to discuss a new feature, feel free to [reach out](mailto:Valerika.Hello@gmail.com).
+### Features
+- Codable conformance for @Published properties (CodingKeys, Decoder and Encoder instances).
+- Customised views (Text Field, Alert).
+- Keyboard responder.
+<br/>
+
+### Discussion
+Feel free to [reach out](mailto:Valerika.Hello@gmail.com) to me  😊
 
 <br/>
 
 ### Credits
-
-I used in my project pictures made by photographer [say straight](https://www.pexels.com/@say-straight-1400349), who have published them on [Pexels](https://www.pexels.com) and allowed to download and use them. Thank you, your photos look stylish and costly 🤩
-
-Amazing fonts that have chosen for the project is licensed under the SIL Open Font License. The licenses are encloded.
-
+Stylish and costly photos made by photographer [say straight](https://www.pexels.com/@say-straight-1400349). Fonts are licensed under the SIL Open Font License.
